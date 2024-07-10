@@ -2,32 +2,245 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+
+    --canvas: 0 0% 96.1%;
+    --canvas-foreground: 0 0% 63.9%;
+
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+
+    --canvas: 0 0% 10%;
+    --canvas-foreground: 0 0% 63.9%;
+
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }
+
+._Puck_mowzv_19 {
+  position: relative !important;
+  border-color: hsl(var(--border)) !important;
+}
+
+._Puck-header_mowzv_105 {
+  background: hsl(var(--background)) !important;
+  color: hsl(var(--primary)) !important;
+  border-color: hsl(var(--border)) !important;
+}
+
+._Puck-leftSideBarToggle_mowzv_132 {
+  color: hsl(var(--muted-foreground)) !important;
+}
+
+._Puck-rightSideBarToggle_mowzv_131 {
+  color: hsl(var(--muted-foreground)) !important;
+}
+
+._Puck-headerTitle_mowzv_136 {
+  color: hsl(var(--accent-foreground)) !important;
+}
+
+._Heading_qxrry_1._Heading--xs_qxrry_42 {
+  color: hsl(var(--accent-foreground)) !important;
+  @apply text-sm !important;
+}
+
+._IconButton_swpni_1:hover {
+  background: hsl(var(--accent)) !important;
+  color: hsl(var(--accent-foreground)) !important;
+}
+
+._MenuBar_8pf8c_1 {
+  background: hsl(var(--background)) !important;
+  color: hsl(var(--primary)) !important;
+}
+
+._IconButton_swpni_1 > svg {
+  stroke: hsl(var(--primary)) !important;
+}
+
+._IconButton--disabled_swpni_20 > svg {
+  stroke: hsl(var(--secondary-foreground)) !important;
+  cursor: not-allowed;
+}
+
+._IconButton--disabled_swpni_20:hover {
+  background: inherit !important;
+}
+
+._Button_1t64k_1._Button--primary_1t64k_48._Button--medium_1t64k_29 {
+  background: hsl(var(--primary)) !important;
+  color: hsl(var(--primary-foreground)) !important;
+  @apply text-xs !important;
+}
+
+._Puck-leftSideBar_mowzv_132 {
+  background: hsl(var(--background)) !important;
+  color: hsl(var(--primary-foreground)) !important;
+  border-right: 1px solid hsl(var(--border)) !important;
+}
+
+._SidebarSection-title_125qe_12 {
+  background: hsl(var(--background)) !important;
+  color: hsl(var(--primary-foreground)) !important;
+  border-bottom: 1px solid hsl(var(--border)) !important;
+  border-color: hsl(var(--border)) !important;
+}
+
+._DrawerItem-draggable_6zh0b_5 {
+  background: hsl(var(--background)) !important;
+  color: hsl(var(--primary)) !important;
+  border-color: hsl(var(--border)) !important;
+}
+
+._DragIcon_1p5wn_1:hover {
+  background: hsl(var(--muted)) !important;
+  color: hsl(var(--primary)) !important;
+}
+
+._Layer_1pgw8_1 {
+  background: transparent !important;
+  color: hsl(var(--primary)) !important;
+  border: 1px solid transparent !important;
+}
+
+._Layer_1pgw8_1:hover {
+  background: transparent !important;
+  color: hsl(var(--primary-foreground)) !important;
+  border: 1px solid transparent !important;
+}
+
+._Layer-inner_1pgw8_29:hover {
+  background: hsl(var(--muted)) !important;
+  color: hsl(var(--primary)) !important;
+  border: 1px solid transparent !important;
+}
+
+._Layer--isSelected_1pgw8_61 {
+  border: 1px solid transparent !important;
+}
+
+._Layer--isSelected_1pgw8_61 > ._Layer-inner_1pgw8_29 {
+  background: hsl(var(--muted)) !important;
+  color: hsl(var(--primary)) !important;
+  border: 1px solid transparent !important;
+}
+
+._PuckCanvas_6zd4y_1 {
+  @apply dark:bg-dot-gray-700 bg-dot-gray-200 relative !important;
+}
+
+._ViewportControls_3zdvn_1 {
+  background: hsl(var(--canvas)) !important;
+  border-left: 2px solid hsl(var(--canvas)) !important;
+  padding-top: 14px;
+  padding-bottom: 14px !important;
+  @apply border-b
+}
+
+._PuckCanvas-inner_6zd4y_21 {
+  margin-top: 56px;
+}
+
+._PuckCanvas-controls_6zd4y_16 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+}
+
+._SidebarSection-breadcrumbLabel_125qe_41 {
+  @apply text-sm dark:text-indigo-400 text-indigo-600 !important
+}
+
+._IconButton--disabled_swpni_20 > svg {
+  @apply text-sm dark:stroke-stone-600 stroke-stone-400 !important
+}
+
+._IconButton_swpni_1._IconButton--disabled_swpni_20 > ._ViewportButton-inner_3zdvn_33 > svg {
+  @apply text-sm dark:stroke-indigo-400 stroke-indigo-600 !important
+}
+
+._Puck-rightSideBar_mowzv_131 {
+  @apply border-l border-border bg-background !important
+}
+
+._ViewportControls-divider_3zdvn_15 {
+  @apply text-sm dark:text-stone-600 text-stone-400 border-border !important
+}
+
+.Puck {
+  @apply w-full
+}
+
+/* ._Drawer_6zh0b_1 {
+  @apply grid grid-cols-2 w-60 gap-2 p-2 pt-0 !important
+}
+
+._DrawerItem-draggableWrapper_6zh0b_5 {
+  @apply p-0 !important
+} */
